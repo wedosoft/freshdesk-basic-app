@@ -1,0 +1,25 @@
+# Freshworks FDK 관련 파일
+.fdk/
+.freddy-copilot-error.log
+log/
+
+# VS Code 설정 관련
+.vscode/
+.cursor/
+
+# 시스템 파일
+.DS_Store
+Thumbs.db
+
+# 캐시 및 임시 파일
+.meta.json
+.report.json
+
+# 로그 파일
+*.log
+
+# 커버리지 리포트
+coverage/
+
+# 종속성 디렉토리
+node_modules/
