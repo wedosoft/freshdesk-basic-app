@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>티켓 상세 보기</title>
+  <link rel="stylesheet" type="text/css" href="https://static.freshdev.io/fdk/2.0/assets/freshdesk.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/css/crayons-min.css">
+  <script src="https://static.freshdev.io/fdk/2.0/assets/fresh_client.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@freshworks/crayons@v4/dist/crayons/crayons.js"></script>
+  <style>
+    .sidebar-container {
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .action-button {
+      width: 100%;
+      margin: 5px 0;
+      --fw-button-font-size: 14px;
+      --fw-button-height: 36px;
+      --fw-button-border-radius: 4px;
+    }
+
+    .ticket-details {
+      margin-top: 20px;
+      padding: 15px;
+    }
+    
+    /* 상단 네비게이션을 위한 스타일 */
+    .top-nav-container {
+      padding: 5px;
+      text-align: center;
+    }
+    
+    .top-nav-button {
+      --fw-button-font-size: 12px;
+      --fw-button-height: 28px;
+      --fw-button-border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 상단 네비게이션 버튼용 컨테이너 -->
+  <div class="top-nav-container" id="topNavContainer">
+    <fw-button id="topNavModalBtn" color="secondary" class="top-nav-button" size="small">
+      티켓 보기
+    </fw-button>
+  </div>
+
+  <!-- 사이드바 버튼용 컨테이너 -->
+  <div class="sidebar-container" id="sidebarContainer">
+    <fw-button id="openModalBtn" color="secondary" class="action-button" size="medium">
+      티켓 상세 보기
+    </fw-button>
+  </div>
+
+  <div class="app-container">
+    <div class="fw-widget-wrapper">
+      <div class="ticket-details">
+        <div id="ticketSubject"></div>
+        <div id="ticketDescription"></div>
+        <div id="ticketReplies"></div>
+      </div>
+    </div>
+  </div>
+  <fw-modal id="ticketModal" title-text="Ticket Details">
+    <fw-modal-title title-text="Ticket Details"></fw-modal-title>
+    <fw-modal-content>
+      <div id="ticketSubject"></div>
+      <div id="ticketDescription"></div>
+      <div id="ticketReplies"></div>
+    </fw-modal-content>
+    <fw-modal-footer></fw-modal-footer>
+  </fw-modal>
+
+  <script src="scripts/app.js"></script>
+</body>
+</html>
